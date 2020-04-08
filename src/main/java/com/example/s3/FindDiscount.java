@@ -38,19 +38,45 @@ import software.amazon.awssdk.services.ec2.model.Ec2Exception;
 import software.amazon.awssdk.services.savingsplans.SavingsplansClient;
 import software.amazon.awssdk.services.savingsplans.model.*;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Map;
+
+
+import org.json.simple.JSONArray;
+import org.json.simple.parser.*;
+import org.json.simple.JSONObject;
+
 import java.util.ArrayList;
 // snippet-end:[s3.java2.s3_bucket_ops.import]
 // snippet-start:[s3.java2.s3_bucket_ops.main]
 public class FindDiscount{
 
-    public static void main(String[] args) {
+    public static void printJsonObject(JSONObject jsonObj) {
+        for (Object key : jsonObj.keySet()) {
+            //based on you key types
+            String keyStr = (String)key;
+            Object keyvalue = jsonObj.get(keyStr);
+
+            //Print key and value
+            //System.out.println("key: "+ keyStr + " value: " + keyvalue + "\n");
+            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
+
+            //for nested objects iteration if required
+            if (keyvalue instanceof JSONObject)
+                printJsonObject((JSONObject)keyvalue);
+        }
+    }
+    public static void main(String[] args) throws IOException, ParseException {
 
         // snippet-start:[s3.java2.s3_bucket_ops.create_bucket]
         // snippet-start:[s3.java2.s3_bucket_ops.region]
        Ec2Client ec2 = Ec2Client.create();
        SavingsplansClient spc = SavingsplansClient.create();
        ArrayList<SavingsPlanOfferingRateFilterElement> spfeList = new ArrayList<>();
-        try {
+       try {
             DescribeReservedInstancesOfferingsRequest req = DescribeReservedInstancesOfferingsRequest.builder().availabilityZone("us-west-2").instanceType("m5.large").productDescription("Linux/UNIX").build();
             System.out.println(req.toString());
             SavingsPlanOfferingRateFilterElement spf1 = SavingsPlanOfferingRateFilterElement.builder().name("region").values("us-west-2").build();
@@ -61,13 +87,43 @@ public class FindDiscount{
             DescribeSavingsPlansOfferingRatesRequest spreq = DescribeSavingsPlansOfferingRatesRequest.builder().filters(spf1, spf2, spf3).build();
             System.out.println(spreq);
             System.out.println("About to fire off a response");
-            DescribeReservedInstancesOfferingsResponse res = ec2.describeReservedInstancesOfferings(req);
-            System.out.println(res);
+            //DescribeSavingsPlansOfferingRatesResponse spres = spc.describeSavingsPlansOfferingRates(spreq);
+            //System.out.println(spres);
+            //DescribeReservedInstancesOfferingsResponse res = ec2.describeReservedInstancesOfferings(req);
+            //System.out.println(res);
             System.out.println("Recvd a response, printed nothing");
         } catch (Ec2Exception e) {
             e.getStackTrace();
         }
-      // snippet-end:[s3.java2.s3_bucket_ops.delete_bucket]
+
+        //can't currently make the right calls, so fake out data with json files grabbed
+        //from cli interface
+        try {
+            Object obj = new JSONParser().parse(new FileReader("ri.json"));
+            JSONObject jsonObj = (JSONObject) obj;
+            //System.out.println(jsonObj);
+            //printJsonObject(jsonObj);
+            JSONArray c = (JSONArray) jsonObj.get("ReservedInstancesOfferings");
+            System.out.println(c);
+            for (int n = 0; n < c.size(); n++) {
+                JSONObject curr = (JSONObject) c.get(n);
+                System.out.println("Curr is: " +  curr);
+                String id = (String) curr.get("ReservedInstancesOfferingId");
+                System.out.println(id);
+                //calculation isn't right - what is fixed price referring to?
+                long duration = (long) curr.get("Duration");
+                double fixedPrice = (double) curr.get("FixedPrice");
+                System.out.println("duration: " + duration + "  fixed price" + fixedPrice);
+                double hourly = fixedPrice/((duration/60)/60);
+                System.out.println("hourly rate: " + hourly);
+            }
+
+        } catch (IOException fnf) {
+            fnf.getStackTrace();
+        }
+
+
+        // snippet-end:[s3.java2.s3_bucket_ops.delete_bucket]
     }
 }
 

@@ -1,0 +1,532 @@
+{
+    "ReservedInstancesOfferings": [
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 501.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "2d195173-5d2f-429f-83ef-b7d00a270417",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "All Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.0,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 577.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "1af5cbc1-ee21-48cd-861c-7dd6b816987d",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "All Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.0,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 968.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "a6162b76-a6e4-46fe-b439-540ce103e110",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "All Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.0,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 1161.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "d5140cdf-4a27-4665-ac2b-d86e84c052a2",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "All Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.0,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 0.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "cded354b-4158-49c7-ae6f-a474285c4410",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "No Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.061,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 0.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "1d476c5b-f6aa-4db5-b467-94d7614f2b7f",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "No Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.071,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 0.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "c1b920e6-4fdc-4d39-9d92-879f22b29fd5",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "No Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.042,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 0.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "7b3b19b0-0984-4d3e-b389-a703c334993b",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "No Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.049,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 256.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "7382be5e-99f1-40f8-a6d9-4d75f2e06670",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "Partial Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.029,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 294.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "4cfd1584-9177-4730-93b4-3abed1c4c86e",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "Partial Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.034,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 515.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "0e11731d-340e-4fc8-92eb-fe60453c024e",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "Partial Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.02,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 592.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "9f0cb5b2-0311-45ce-b53f-773f32725c62",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "default",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "Partial Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.023,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 553.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "deb7f49a-015c-443c-8c1b-3af1aafd9ba7",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "All Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.0,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 628.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "9d891108-e636-41e3-8f46-f31b488faa58",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "All Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.0,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 1122.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "709c1049-0225-4068-9ff0-4b7d947bee38",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "All Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.0,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 1315.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "545b65d2-c2b2-4d0b-b32a-6789ce874e89",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "All Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.0,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 0.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "a0ba53fd-c0fc-4662-979b-e2f26163fd46",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "No Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.067,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 0.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "d0bf3f24-ba91-4bb1-8c06-fc47952501ac",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "No Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.076,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 0.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "20e6efe4-c881-42a3-b669-6b4e42094479",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "No Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.048,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 0.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "7642cdb5-6ad8-4d79-8bfd-281255647d53",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "No Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.055,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 281.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "b6d9868d-1809-4501-a797-f759f50739ed",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "Partial Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.032,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 31536000,
+            "FixedPrice": 320.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "81c20156-60c2-4fb2-a6f4-0c48fd10299b",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "Partial Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.037,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 592.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "5afb8ee3-28fd-4a65-bffe-9af6dacf9684",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "standard",
+            "OfferingType": "Partial Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.023,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        },
+        {
+            "AvailabilityZone": "us-west-2a",
+            "Duration": 94608000,
+            "FixedPrice": 669.0,
+            "InstanceType": "m5.large",
+            "ProductDescription": "Linux/UNIX",
+            "ReservedInstancesOfferingId": "d409f4bd-0d3b-4e79-88dc-93471948882a",
+            "UsagePrice": 0.0,
+            "CurrencyCode": "USD",
+            "InstanceTenancy": "dedicated",
+            "Marketplace": false,
+            "OfferingClass": "convertible",
+            "OfferingType": "Partial Upfront",
+            "PricingDetails": [],
+            "RecurringCharges": [
+                {
+                    "Amount": 0.025,
+                    "Frequency": "Hourly"
+                }
+            ],
+            "Scope": "Availability Zone"
+        }
+    ]
+}
