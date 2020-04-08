@@ -35,6 +35,10 @@ import software.amazon.awssdk.services.ec2.Ec2Client;
 import software.amazon.awssdk.services.ec2.model.DescribeReservedInstancesOfferingsRequest;
 import software.amazon.awssdk.services.ec2.model.DescribeReservedInstancesOfferingsResponse;
 import software.amazon.awssdk.services.ec2.model.Ec2Exception;
+import software.amazon.awssdk.services.savingsplans.SavingsplansClient;
+import software.amazon.awssdk.services.savingsplans.model.*;
+
+import java.util.ArrayList;
 // snippet-end:[s3.java2.s3_bucket_ops.import]
 // snippet-start:[s3.java2.s3_bucket_ops.main]
 public class FindDiscount{
@@ -44,9 +48,18 @@ public class FindDiscount{
         // snippet-start:[s3.java2.s3_bucket_ops.create_bucket]
         // snippet-start:[s3.java2.s3_bucket_ops.region]
        Ec2Client ec2 = Ec2Client.create();
+       SavingsplansClient spc = SavingsplansClient.create();
+       ArrayList<SavingsPlanOfferingRateFilterElement> spfeList = new ArrayList<>();
         try {
             DescribeReservedInstancesOfferingsRequest req = DescribeReservedInstancesOfferingsRequest.builder().availabilityZone("us-west-2").instanceType("m5.large").productDescription("Linux/UNIX").build();
             System.out.println(req.toString());
+            SavingsPlanOfferingRateFilterElement spf1 = SavingsPlanOfferingRateFilterElement.builder().name("region").values("us-west-2").build();
+            SavingsPlanOfferingRateFilterElement spf2 = SavingsPlanOfferingRateFilterElement.builder().name("instanceType").values("m5.large").build();
+            SavingsPlanOfferingRateFilterElement spf3 = SavingsPlanOfferingRateFilterElement.builder().name("product").values("Linux/UNIX").build();
+            System.out.println(spf1);
+            System.out.println(spf2);
+            DescribeSavingsPlansOfferingRatesRequest spreq = DescribeSavingsPlansOfferingRatesRequest.builder().filters(spf1, spf2, spf3).build();
+            System.out.println(spreq);
             System.out.println("About to fire off a response");
             DescribeReservedInstancesOfferingsResponse res = ec2.describeReservedInstancesOfferings(req);
             System.out.println(res);
