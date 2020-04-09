@@ -108,7 +108,12 @@ public class FindDiscount{
                 String id = (String) curr.get("ReservedInstancesOfferingId");
                 long duration = (long) curr.get("Duration");
                 double fixedPrice = (double) curr.get("FixedPrice");
-                double hourly = fixedPrice/((duration/60)/60);
+                JSONArray recurring = (JSONArray) curr.get("RecurringCharges");
+                JSONObject rcharges = (JSONObject) recurring.get(0);
+                System.out.println("rcharges is: " + rcharges);
+                double hourlyrecurring = (double) rcharges.get("Amount");
+                System.out.println("amount "+ hourlyrecurring);
+                double hourly = (fixedPrice/((duration/60)/60)) + hourlyrecurring;
                 offerings.put(id, hourly);
             }
         } catch (IOException fnf) {
