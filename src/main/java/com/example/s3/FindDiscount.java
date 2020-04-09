@@ -41,15 +41,13 @@ import software.amazon.awssdk.services.savingsplans.model.*;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 
 import org.json.simple.JSONArray;
 import org.json.simple.parser.*;
 import org.json.simple.JSONObject;
 
-import java.util.ArrayList;
 // snippet-end:[s3.java2.s3_bucket_ops.import]
 // snippet-start:[s3.java2.s3_bucket_ops.main]
 public class FindDiscount{
@@ -73,6 +71,7 @@ public class FindDiscount{
 
         // snippet-start:[s3.java2.s3_bucket_ops.create_bucket]
         // snippet-start:[s3.java2.s3_bucket_ops.region]
+        Map<String, Double> offerings = new HashMap<>();
        Ec2Client ec2 = Ec2Client.create();
        SavingsplansClient spc = SavingsplansClient.create();
        ArrayList<SavingsPlanOfferingRateFilterElement> spfeList = new ArrayList<>();
@@ -104,23 +103,36 @@ public class FindDiscount{
             //System.out.println(jsonObj);
             //printJsonObject(jsonObj);
             JSONArray c = (JSONArray) jsonObj.get("ReservedInstancesOfferings");
-            System.out.println(c);
             for (int n = 0; n < c.size(); n++) {
                 JSONObject curr = (JSONObject) c.get(n);
-                System.out.println("Curr is: " +  curr);
                 String id = (String) curr.get("ReservedInstancesOfferingId");
-                System.out.println(id);
-                //calculation isn't right - what is fixed price referring to?
                 long duration = (long) curr.get("Duration");
                 double fixedPrice = (double) curr.get("FixedPrice");
-                System.out.println("duration: " + duration + "  fixed price" + fixedPrice);
                 double hourly = fixedPrice/((duration/60)/60);
-                System.out.println("hourly rate: " + hourly);
+                offerings.put(id, hourly);
             }
-
         } catch (IOException fnf) {
             fnf.getStackTrace();
         }
+        try {
+            Object obj = new JSONParser().parse(new FileReader("sp.json"));
+            JSONObject jsonObj = (JSONObject) obj;
+            JSONArray c = (JSONArray) jsonObj.get("searchResults");
+            for (int n = 0; n < c.size(); n++) {
+                JSONObject curr = (JSONObject) c.get(n);
+                JSONObject spInstance = (JSONObject) curr.get("savingsPlanOffering");
+                String id = (String) spInstance.get("offeringId");
+                String rate = (String) curr.get("rate");
+                double drate = Double.parseDouble(rate);
+                offerings.put(id, drate);
+            }
+        } catch (IOException fnf) {
+            fnf.getStackTrace();
+        }
+
+        System.out.println(offerings);
+        String key = Collections.min(offerings.entrySet(), Map.Entry.comparingByValue()).getKey();
+        System.out.println("Key: " + key);
 
 
         // snippet-end:[s3.java2.s3_bucket_ops.delete_bucket]
