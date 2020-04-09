@@ -139,6 +139,8 @@ public class FindDiscount{
         String key = Collections.min(offerings.entrySet(), Map.Entry.comparingByValue()).getKey();
         System.out.println("Key: " + key);
 
+        ec2.close();
+        spc.close();
 
         // snippet-end:[s3.java2.s3_bucket_ops.delete_bucket]
     }
