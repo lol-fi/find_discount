@@ -20,6 +20,11 @@ Finally, I found the minimum value in the hash map. The offer that is the key fo
 
 What still needs to be done in this program is to make the api call to get the Reserved Instances and Savings Plans offerings from the Java api, and use the object returned to make calculations instead of using the stand-in values from the JSON files from the cli api call. The current offerings likely change, so while this was a good way to get past a point of being stuck, the Java api will need to be used. The object returned by the DescribeReservedInstanceOfferingsResponse and DescribeSavingsPlansOfferingsRates will have the same fields as the JSON, and the calculations will still be the same. 
 
-
-
-
+After completing the API call, adding tests can be worthwhile.
+Some test examples are:
+Validate that I am only receiving offerings that are LINUX/Unix
+Validate that I am only receiving offerings that are in us-west-2
+Validate that I am only receiving offerings that are m5.large
+Validate that we get the correct error if we are not able to complete the api call
+Validate correct response in the case where there are no offerings that meet the
+criteria
